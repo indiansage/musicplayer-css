@@ -1,0 +1,479 @@
+<!-- Mobile-first responsive design, tested on latest versions of Chrome and Firefox -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+        <title>The Riffs | Home</title>
+        <link rel="shortcut icon" href="favicon.png" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Proza+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./fontawesome/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./shared.css" />
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="main-header-div">
+                <a href="./index.html" class="main-header-logo">
+                    <i class="fas fa-guitar fa-3x"></i>
+                    <span class="main-header-text">The Riffs</span>
+                </a>
+            </div>
+            <ul class="main-nav-items">
+                <li class="main-nav-item main-nav-search main-nav-desktop">
+                    <input
+                        class="main-nav-search-input"
+                        type="text"
+                        name=""
+                        placeholder="Search"
+                    />
+                    <a class="main-nav-search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+                <li class="main-nav-item main-nav-desktop">
+                    <a class="main-nav-notification" href="#">
+                        <i class="fas fa-bell fa-lg"></i>
+                    </a>
+                </li>
+                <li class="main-nav-item main-nav-desktop">
+                    <a class="main-nav-user" href="#">
+                        <i class="fas fa-user fa-lg"></i>
+                    </a>
+                </li>
+                <li class="main-nav-item main-nav-mobile">
+                    <a class="main-nav-burger-menu" href="#">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <main class="main-container">
+            <div class="main-content">
+                <section class="featured">
+                    <div class="main-content-header">#Featured</div>
+                    <div class="line"></div>
+                    <div class="slide-carousel">
+                        <div class="slide-wrapper">
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                            <div class="slide"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="latest">
+                    <div class="main-content-header">#Latest</div>
+                    <div class="line"></div>
+                    <div class="latest-songs">
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/collection_one.jpg' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Roses</div>
+                                <div class="latest-song-artist">Saint Jhn</div>
+                                <div class="latest-song-duration">2:56</div>
+                            </div>
+                        </div>
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/blame_it_on_baby.png' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Rockstar</div>
+                                <div class="latest-song-artist">DaBaby</div>
+                                <div class="latest-song-duration">3:01</div>
+                            </div>
+                        </div>
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/after_hours.png' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Heartless</div>
+                                <div class="latest-song-artist">The Weeknd</div>
+                                <div class="latest-song-duration">3:21</div>
+                            </div>
+                        </div>
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/suga.jpeg' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Savage</div>
+                                <div class="latest-song-artist">Megan Thee Stallion</div>
+                                <div class="latest-song-duration">2:36</div>
+                            </div>
+                        </div>
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/pop_smoke.png' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Make It Rain</div>
+                                <div class="latest-song-artist">Pop Smoke</div>
+                                <div class="latest-song-duration">3:24</div>
+                            </div>
+                        </div>
+                        <div class="latest-song">
+                            <img src='./assets/images/main_latest/after_hours.png' class="latest-song-art"></img>
+                            <div class="latest-song-info">
+                                <div class="latest-song-title">Blinding Lights</div>
+                                <div class="latest-song-artist">The Weeknd</div>
+                                <div class="latest-song-duration">3:22</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <section class="artists">
+                    <div class="main-content-header">#Artists</div>
+                    <div class="line"></div>
+                    <div class="artist-container">
+                        <a href="./playlist/" class="artist">
+                            <img src='./assets/images/main_artists/adele.jpg' class="artist-photo" />
+                            <div class="artist-name">Adele</div>
+                        </a>
+                        <a href="./playlist/" class="artist">
+                            <img src='./assets/images/main_artists/eminem.jpg' class="artist-photo" />
+                            <div class="artist-name">Eminem</div>
+                        </a>
+                        <a href="./playlist/" class="artist">
+                            <img src='./assets/images/main_artists/sheeran.jpg' class="artist-photo" />
+                            <div class="artist-name">Ed Sheeran</div>
+                        </a>
+                        <a href="./playlist/" class="artist">
+                            <img src='./assets/images/main_artists/bruno.jpg' class="artist-photo" />
+                            <div class="artist-name">Bruno Mars</div>
+                        </a>
+                        <a href="./playlist/" class="artist">
+                            <img src='./assets/images/main_artists/snoop.jpg' class="artist-photo" />
+                            <div class="artist-name">Snoop Dogg</div>
+                        </a>
+                    </div>
+                </section>
+                <section class="radio">
+                    <div class="main-content-header">#Radio</div>
+                    <div class="line"></div>
+                    <div class="radio-container">
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/BigFM.jpg" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                BigFM
+                            </div>
+                        </div>
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/red-fm.jpg" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                RedFM
+                            </div>
+                        </div>
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/Radio-One.jpg" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                Radio One
+                            </div>
+                        </div>
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/radiomirchi1.png" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                Radio Mirchi
+                            </div>
+                        </div>
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/beatfm.png" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                BeatFM
+                            </div>
+                        </div>
+                        <div class="radio-station">
+                            <img src="./assets/images/main_radio/FeverFM.jpg" class="radio-station-logo" />
+                            <div class="radio-station-name">
+                                FeverFM
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="genre">
+                    <div class="main-content-header">#Genre</div>
+                    <div class="line"></div>
+                    <div class="genre-container">
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Chill</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Electronic</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Love</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Party</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Pop</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Retro</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Road</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Rock</span>
+                            </div>
+                        </div>
+                        <div class="genre-item">
+                            <div class="genre-image">
+                                <span class="genre-name">Workout</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <aside class="queue">
+                <div class="main-content-header">#Queue</div>
+                <div class="line"></div>
+                <div class="queue-scrollable-list">
+                    <div class="queue-item queue-item-played">
+                        <div class="queue-item-serial">1</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item queue-item-played">
+                        <div class="queue-item-serial">2</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/PearlJam.jpg"></img>
+                        <div class="queue-item-title">Gone</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like queue-item-liked" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item queue-item-played">
+                        <div class="queue-item-serial">3</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/HighVoltage_ACDC.jpg"></img>
+                        <div class="queue-item-title">High Voltage</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like queue-item-liked" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item queue-item-now-playing">
+                        <div class="queue-item-serial">4</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/HighVoltage_ACDC.jpg"></img>
+                        <div class="queue-item-title">T.N.T.</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-pause fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">5</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">6</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">7</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">8</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">9</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">10</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">11</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">12</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="queue-item">
+                        <div class="queue-item-serial">13</div>
+                        <img class="queue-item-art" src="./assets/images/main_queue/NirvanaNevermind.jpg"></img>
+                        <div class="queue-item-title">Smells Like Teen Spirit</div>
+                        <div class="queue-item-buttons">
+                            <a class="queue-item-play-pause" href="#">
+                                <i class="fas fa-play fa-lg"></i>
+                            </a>
+                            <a class="queue-item-like" href="#">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </aside>
+        </main>
+        <footer class="music-player">
+            <div class="active-song">
+                <div class="active-song-now-playing">Now playing:</div>
+                <img class="active-song-art" src="./assets/images/main_queue/HighVoltage_ACDC.jpg">
+                <div class="active-song-info">
+                    <div class="active-song-title">T.N.T.</div>
+                    <div class="active-song-artist">AC/DC</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <div class="player-controls-buttons">
+                    <a class="player-controls-button no-mobile" href="#">
+                        <i class="fas fa-random"></i>
+                    </a>
+                    <a class="player-controls-button" href="#">
+                        <i class="fas fa-step-backward"></i>
+                    </a>
+                    <a class="player-controls-button" href="#">
+                        <i class="fas fa-pause fa-lg"></i>
+                    </a>
+                    <a class="player-controls-button" href="#">
+                        <i class="fas fa-step-forward"></i>
+                    </a>
+                    <a class="player-controls-button no-mobile" href="#">
+                        <i class="fas fa-redo-alt"></i>
+                    </a>
+                </div>
+                <div class="player-controls-slider">
+                    <div class="player-controls-time">
+                        0:00
+                    </div>
+                    <div class="player-controls-slider-container">
+                        <input type="range" min="0" max="100" value="0" class="slider-input">
+                    </div>
+                    <div class="player-controls-time">
+                        4:44
+                    </div>
+                </div>
+            </div>
+            <div class="volume-controls">
+                <a class="player-controls-button" href="#">
+                    <i class="fas fa-volume-up"></i>
+                </a>
+                <div class="volume-controls-slider">
+                    <div class="volume-controls-slider-container">
+                        <input type="range" min="0" max="100" value="50" class="slider-input">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

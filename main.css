@@ -1,0 +1,522 @@
+/* This file contains css for home page */
+
+/* Main container in body */
+.main-container {
+    margin-top: 5.5rem;
+    display: flex;
+    background: var(--secondary-theme-color);
+    height: calc(90vh - 5.5rem);
+}
+
+/* Main content container*/
+.main-content {
+    flex: 2 1 700px;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+
+/* disable scrollbar in Chrome */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Header text */
+.main-content-header {
+    font-family: var(--heading-text-font);
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 0.1rem;
+    color: var(--secondary-theme-color);
+    cursor: default;
+}
+
+/* Featured container */
+.featured {
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    padding: 1rem 0;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+}
+
+/* Sliding carousel animation */
+.slide-carousel {
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.slide-wrapper {
+    width: 1000px;
+    -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+    float: left;
+    height: 200px;
+    width: 200px;
+}
+
+.slide:nth-child(1) {
+    background: no-repeat center/cover
+        url(./assets/images/main_featured/madonna.jpg);
+}
+
+.slide:nth-child(2) {
+    background: no-repeat center/cover
+        url(./assets/images/main_featured/eminem.jpeg);
+}
+
+.slide:nth-child(3) {
+    background: no-repeat center/cover
+        url(./assets/images/main_featured/pink_floyd.jpg);
+}
+
+.slide:nth-child(4) {
+    background: no-repeat center/cover
+        url(./assets/images/main_featured/weekender.jpg);
+}
+
+@-webkit-keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+    30% {
+        margin-left: -200px;
+    }
+    50% {
+        margin-left: -200px;
+    }
+    60% {
+        margin-left: -400px;
+    }
+    70% {
+        margin-left: -400px;
+    }
+    80% {
+        margin-left: -600px;
+    }
+    90% {
+        margin-left: -600px;
+    }
+}
+
+/* Media query for larger screens sliding carousel animation */
+@media screen and (min-width: 550px) {
+    .slide-carousel {
+        height: 500px;
+        width: 500px;
+    }
+
+    .slide-wrapper {
+        width: 2500px;
+    }
+
+    .slide {
+        height: 500px;
+        width: 500px;
+    }
+
+    @-webkit-keyframes slide {
+        20% {
+            margin-left: 0px;
+        }
+        30% {
+            margin-left: -500px;
+        }
+        50% {
+            margin-left: -500px;
+        }
+        60% {
+            margin-left: -1000px;
+        }
+        70% {
+            margin-left: -1000px;
+        }
+        80% {
+            margin-left: -1500px;
+        }
+        90% {
+            margin-left: -1500px;
+        }
+    }
+}
+
+/* Disable queue in smaller screens */
+.queue {
+    display: none;
+}
+
+/* Enable queue in larger screens */
+@media screen and (min-width: 850px) {
+    .queue {
+        display: block;
+        flex: 1 1 300px;
+        margin: 1rem 1rem 1rem 0;
+        box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+        border-radius: 2px;
+        background: var(--main-theme-color);
+        padding: 1rem 0;
+        height: 95%;
+    }
+}
+
+.queue .main-content-header{
+    height:5%
+}
+
+/* Scroll on overflow of queue */
+.queue-scrollable-list {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+
+/* disable scrollbar in Chrome */
+.queue-scrollable-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Queued song */
+.queue-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: default;
+}
+
+/* Currently playing song */
+.queue-item.queue-item-now-playing{
+    background-color: var(--third-theme-color);
+    border-radius: 1rem;
+}
+
+/* Serial number */
+.queue-item-serial {
+    color: var(--main-text-color);
+    flex: 0 0 1.5rem;
+}
+
+/* Strike through serial of played songs */
+.queue-item.queue-item-played .queue-item-serial{
+    text-decoration: line-through;
+}
+
+/* Song artwork, can be dynamically generated through javascript */
+.queue-item-art {
+    height: 100px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+/* Song title */
+.queue-item-title {
+    color: var(--main-text-color);
+    padding-left: 1rem;
+}
+
+/* Strike through song title of played songs */
+.queue-item.queue-item-played .queue-item-title{
+    text-decoration: line-through;
+}
+
+/* Actions on queued song */
+.queue-item-buttons {
+    visibility: hidden;
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+}
+
+/* display buttons on hover */
+.queue-item:hover .queue-item-buttons {
+    visibility: visible;
+}
+
+/* Play button */
+.queue-item-play-pause{
+    margin: 0 0.5rem;
+    color: var(--secondary-theme-color);
+}
+
+/* Like button */
+.queue-item-like{
+    margin: 0 0.5rem;
+    color: var(--secondary-theme-color);
+}
+
+/* Liked button when liked */
+.queue-item-like.queue-item-liked{
+    color: var(--like-color);
+}
+
+/* Latest songs container */
+.latest {
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+}
+
+/* Container below title text */
+.latest-songs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+/* Individual latest song */
+.latest-song {
+    flex: 1 0 250px;
+    background-color: var(--third-theme-color);
+    height: 125px;
+    margin: 0.4rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.latest-song:hover{
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+}
+
+/* Latest song info */
+.latest-song-info {
+    padding-left: 0.2rem;
+}
+
+/* Latest song info - title */
+.latest-song-title {
+    color: var(--main-text-color);
+}
+
+/* Latest song info - artist */
+.latest-song-artist {
+    color: var(--main-text-color);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Latest song info - duration */
+.latest-song-duration {
+    color: var(--main-text-color);
+}
+
+/* Latest song artwork */
+.latest-song-art {
+    height: 100px;
+    width: 100px;
+    margin-left: 0.2rem;
+    border-radius: 10px;
+}
+
+/* Artists section */
+.artists {
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+}
+
+/* Container below title */
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    justify-content: space-between;
+}
+
+/* Individual artist */
+.artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.2rem;
+    text-decoration: none;
+}
+
+/* Artist image */
+.artist-photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+/* Hover effect */
+.artist:hover .artist-photo{
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+} 
+
+/* Name of artist */
+.artist-name {
+    padding: 0.1rem 0;
+    color: var(--main-text-color);
+}
+
+/* Radio section */
+.radio {
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+}
+
+/* Container below title */
+.radio-container {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+
+/* disable scrollbar in Chrome */
+.radio-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual radio station */
+.radio-station {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.radio-station:hover {
+    background-image: linear-gradient(
+		0deg,
+		var(--third-theme-color) -66%,
+		rgba(0, 0, 0, 0)
+    );
+    border-radius: 2rem;
+}
+
+/* Radio station logo, can be dynamically generated through javascript */
+.radio-station-logo {
+    height: 150px;
+    width: 250px;
+    object-fit: scale-down;
+}
+
+/* Name of radio station */
+.radio-station-name {
+    color: var(--main-text-color);
+    padding-top: 1rem;
+}
+
+/* Genre section */
+.genre {
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+}
+
+/* Container below title */
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Stock images for genre */
+.genre-container .genre-item:nth-child(1) .genre-image{
+    background: center/100% url("./assets/images/main_genres/chill.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(2) .genre-image{
+    background: center/150% url("./assets/images/main_genres/electronic.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(3) .genre-image{
+    background:center/100% url("./assets/images/main_genres/love.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(4) .genre-image{
+    background: center/150% url("./assets/images/main_genres/party.jpg") no-repeat;
+    background-size: 150%;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(5) .genre-image{
+    background:center/110% url("./assets/images/main_genres/pop.jpg") no-repeat;
+    background-size: 110%;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(6) .genre-image{
+    background:center/100% url("./assets/images/main_genres/retro.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(7) .genre-image{
+    background:center/150% url("./assets/images/main_genres/road.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(8) .genre-image{
+    background:center/100% url("./assets/images/main_genres/rock.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.genre-container .genre-item:nth-child(9) .genre-image{
+    background:center/100% url("./assets/images/main_genres/workout.jpg") no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+/* Individual genre item */
+.genre-item {
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    border-radius: 20rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+/* General genre image properties */
+.genre-image {
+    display: flex; 
+}
+
+/* Name of genre */
+.genre-name {
+    margin:auto;
+    color: var(--main-text-color);
+    font-size: 1.8rem;
+}
+
+/* Hover effects */
+.genre-item:hover{
+    transform: scale(1);
+}
+.genre-item:hover .genre-image{
+    transform: scale(1.2);
+    transition: all ease-in-out 0.3s;
+}
+.genre-item:hover .genre-name{
+    transform: scale(0.7);
+    transition: all ease-in-out 0.3s;
+}
+

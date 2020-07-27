@@ -1,0 +1,309 @@
+/* This file contains css for playlist page */
+
+/* Main container in page */
+.playlist-container {
+    margin-top: 5.5rem;
+    display: flex;
+    background: var(--secondary-theme-color);
+    height: calc(90vh - 5.5rem);
+}
+
+/* Left side scrolling section */
+.playlist-content {
+    flex: 2 1 700px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+/* disable scrollbar in Chrome */
+.playlist-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Overview container on top */
+.playlist-overview{
+    display:flex;
+    background: var(--main-theme-color);
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+}
+
+/* Image in overview */
+.playlist-overview-img{
+    height:200px;
+    width: 200px;
+    border-radius: 2px;
+    margin: 0.5rem;
+}
+
+/* Description container */
+.playlist-description{
+    display: flex;
+    flex-direction: column;
+    margin:0.5rem;
+}
+
+/* Description title */
+.playlist-description-title{
+    color: var(--main-text-color);
+    font-size: 1.8rem;
+    font-family: var(--heading-text-font);
+}
+
+/* Description subtitle */
+.playlist-description-subtitle{
+    color: var(--main-text-color);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Description text */
+.playlist-description-text{
+    color: var(--main-text-color);
+    font-size: 0.8rem;
+}
+
+/* Action buttons container for playlist */
+.playlist-description-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Indiviual action buttons for playlist */
+.playlist-description-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0.5rem 0.5rem 0.5rem 0;
+    width: 7rem;
+    cursor: pointer;
+    background-color: var(--third-theme-color);
+    outline:none;
+    border-radius: 8px;
+    color: var(--main-text-color);
+    padding:0.4rem;
+}
+
+/* Playlist songs container */
+.playlist-songs{
+    width:100%;
+    padding-left: 0;
+}
+
+/* Individual playlist songs */
+.playlist-song{
+    display:flex;
+    justify-content: space-between;
+    background: var(--main-theme-color);
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    align-items: center;  
+}
+
+/* Playlist song serial number */
+.playlist-song-serial{
+    color: var(--main-text-color);
+    padding-left: 1rem;
+    flex:1 1 16px;
+}
+
+/* Playlist song artwork */
+.playlist-song-art{
+    height:100px;
+    width:100px;
+    border-radius: 4px;
+    flex:0 0 100px;
+}
+
+/* Playlist song information container */
+.playlist-song-info{
+    display: flex;
+    flex-direction: column;
+    flex:2 1 32px;
+    padding-left: 1rem;
+}
+
+/* Playlist song title */
+.playlist-song-info-title{
+    color: var(--main-text-color);
+}
+
+/* Playlist song album */
+.playlist-song-info-album{
+    color: var(--main-text-color);
+    font-size: 0.8rem;
+}
+
+/* Playlist song duration */
+.playlist-song-duration{
+    color: var(--main-text-color);
+    flex:1 1 32px;
+}
+
+/* Playlist song action buttons */
+.playlist-song-buttons {
+    display: flex;
+    flex:1 1 64px;
+}
+
+/* Playlist song individual button */
+.playlist-song-button {
+    width: 32px;
+    height: 32px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Right side content container, not needed for smaller screens */
+.aside-content {
+    display: none;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 850px) {
+    .aside-content {
+        display: flex;
+        flex: 1 1 300px;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+/* Header text */
+.playlist-content-header {
+    font-family: var(--heading-text-font);
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 0.1rem;
+    color: var(--secondary-theme-color);
+}
+
+/* Similar artists section */
+.similar-artists{
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+    height:50%;
+}
+
+/* Container below title */
+.similar-artists-container{
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    height:90%;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+/* disable scrollbar in Chrome */
+.similar-artists-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual similar artist */
+.similar-artist{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* Image for similar artist, src attribute can be attached to dynamic javascript variable */
+.similar-artist-img{
+    height:64px;
+    width:64px;
+    border-radius: 50%;
+    padding: 0 8px;
+    flex:0 0 80px;
+}
+
+/* Name of similar artist */
+.similar-artist-title{
+    color: var(--main-text-color);
+    flex: 1 1;
+}
+
+/* Recently played section */
+.recently-played{
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 2px;
+    background: var(--main-theme-color);
+    padding: 1rem 0;
+    height:40%;
+}
+
+/* Container below title */
+.recently-played-songs{
+    width:100%;
+    padding-left: 0;
+    height:80%;
+    overflow-y:scroll;
+    scrollbar-width: none; /* disable scrollbar in Firefox */
+}
+/* disable scrollbar in Chrome */
+.recently-played-songs::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual recently played song */
+.recently-played-song{
+    display:flex;
+    justify-content: space-between;
+    background: var(--main-theme-color);
+    box-shadow: 3px 3px 5px 6px var(--main-theme-color);
+    margin: 1rem;
+    border-radius: 2px;
+    align-items: center;  
+}
+
+/* Recently played song artwork */
+.recently-played-song-art{
+    height:64px;
+    width:64px;
+    border-radius: 4px;
+}
+
+/* Recently played song info container */
+.recently-played-song-info{
+    display: flex;
+    flex-direction: column;
+    padding-left:0.5rem;
+    margin-right: auto;
+}
+
+/* Recently played song title */
+.recently-played-song-info-title{
+    color: var(--main-text-color);
+}
+
+/* Recently played song album name */
+.recently-played-song-info-album{
+    color: var(--main-text-color);
+    font-size: 0.8rem;
+}
+
+/* Recently played song action buttons container */
+.recently-played-song-buttons {
+    display: flex;
+}
+
+/* Recently played song individual action button */
+.recently-played-song-button {
+    width: 32px;
+    height: 32px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

@@ -1,0 +1,332 @@
+/* This file contains css that is common to all html files */
+
+
+/* Defining variables for colors and text used throughout */
+:root {
+    --main-theme-color: #4C1A57; /*darker*/
+    --secondary-theme-color: #F4EDEA; /*lighter*/
+    --third-theme-color: #007C77; /*darker*/
+    --main-text-color: #F4EDEA; /*lighter*/
+    --secondary-text-color: #12263A; /*darker*/
+    --like-color: red;
+    --main-text-font: 'Proza Libre', sans-serif;
+    --heading-text-font: 'Cormorant Garamond', serif;
+}
+
+/* Include padding and border in height and width of an element throughout */
+* {
+    box-sizing: border-box;
+}
+
+/* Defaults for inherit */
+body {
+    font-family: var(--main-text-font);
+    margin: 0;
+}
+
+/* Navbar */
+.main-header {
+    background: var(--third-theme-color);
+    padding: 8px 16px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 5.5rem;
+}
+
+/* Container for logo */
+.main-header-div {
+    display: flex;
+}
+
+/* Logo taken from fontawesome */
+.main-header-logo {
+    display: flex;
+    color: var(--secondary-theme-color);
+    text-decoration: none;
+    align-self: center;
+}
+
+/* Text beside logo */
+.main-header-text {
+    align-self: center;
+    font-family: var(--heading-text-font);
+    font-size: 2rem;
+}
+
+/* Container for elements on right side of navbar */
+.main-nav-items {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Individual elements on right side of navbar */
+.main-nav-item {
+    padding: 1rem;
+}
+
+/* Do not display on smaller screens */
+.main-nav-item.main-nav-desktop{
+    display:none;
+}
+
+/* Display on smaller screens */
+.main-nav-item.main-nav-mobile{
+    display:block;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 575px){
+    .main-nav-item.main-nav-desktop{
+        display:block;
+    }
+    .main-nav-item.main-nav-mobile{
+        display:none;
+    }
+}
+
+/* Search bar */
+.main-nav-search {
+    background: var(--secondary-theme-color);
+    border-radius: 40px;
+}
+
+/* Search bar input */
+.main-nav-search-input {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: var(--secondary-theme-color);
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-family: var(--main-text-font);
+}
+
+/* Search bar input element on hover */
+.main-nav-search:hover > .main-nav-search-input {
+    width: 20vw;
+    padding: 0 6px;
+    color: var(--secondary-text-color);
+}
+
+/* Search bar button */
+.main-nav-search-btn {
+    color: var(--main-theme-color);
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+/* Search bar button on hover */
+.main-nav-search:hover > .main-nav-search-btn {
+    background: var(--secondary-theme-color);
+}
+
+/* Notification button */
+.main-nav-notification {
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* User profile button */
+.main-nav-user {
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Burger menu button for smaller screens */
+.main-nav-burger-menu {
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Horizontal fading line used commonly in code */
+.line {
+    border: 0;
+    height: 4px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+    background: linear-gradient(to right,var(--secondary-theme-color) 0%,var(--secondary-theme-color) 10%,var(--main-theme-color) 40%);  
+}
+
+/* Music player container at bottom */
+.music-player{
+    height:10vh;
+    width:100%;
+    background: var(--third-theme-color);
+    position: fixed;
+    bottom:0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Active song details container */
+.active-song{
+    display: flex;
+    height:100%;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+/* Active song extra text, not required for smaller screens */
+.active-song-now-playing{
+    display: none;
+}
+
+/* Media query for extra text*/
+@media screen and (min-width:720px){
+    .active-song-now-playing{
+        display: block;
+        color: var(--main-text-color);
+        font-style: oblique;
+        font-weight: bold;
+        padding-right: 1rem;
+    }
+}
+
+/* Active song details container */
+.active-song-art{
+    height: 90%;
+    width: auto;
+    border-radius: 2px;
+}
+
+/* Active song information */
+.active-song-info{
+    margin-left: 0.5rem;
+}
+
+/* Active song information - title */
+.active-song-title{
+    color: var(--main-text-color);
+}
+
+/* Active song information - artist */
+.active-song-artist{
+    color: var(--main-text-color);
+    font-size: 0.6rem;
+    font-style: italic;
+}
+
+/* Container for currently playing song controls */
+.player-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 250px;
+}
+
+/* Control buttons container */
+.player-controls-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Individual control buttons */
+.player-controls-button {
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-theme-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Some buttons removed for smaller screens */
+.player-controls-button.no-mobile{
+    display: none;
+}
+
+/* Buttons added for larger screens */
+@media screen and (min-width:600px){
+    .player-controls-button.no-mobile{
+        display: flex;
+    }
+}
+
+/* Container for currently playing track progress */
+.player-controls-slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+
+/* Time either side of slider */
+.player-controls-time {
+	margin: 0px 10px;
+}
+
+/* Container for progress slider */
+.player-controls-slider-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/* Input slider for track progress and volume, can be controlled through javascript */
+.slider-input {
+	width: 100%;
+	height: 5px;
+	background: var(--secondary-theme-color);
+	outline: none;
+}
+
+/* Volume controls container */
+.volume-controls{
+    display: flex;
+    align-items: center;
+    padding-right:0.5rem
+}
+
+/* Volume controls slider */
+.volume-controls-slider-container .slider-input{
+    margin-bottom: 10px;
+}
+
+/* Firefox specific volume controls slider */
+@-moz-document url-prefix() {
+    .volume-controls-slider-container .slider-input{
+        margin-bottom: 0;
+    }
+}
